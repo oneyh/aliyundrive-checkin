@@ -61,7 +61,7 @@ class MessageSend:
             "title": title,
             "desp": content,
         }
-        resp = requests.get(f"https://sc.ftqq.com/{sendkey}.send?text={title}<br>\r\n-{content}")
+        resp = requests.get(f"https://sc.ftqq.com/{sendkey}.send?text={title}=-=>>>>{content}")
         resp_json = resp.json()
         if resp_json["code"] == 0:
             print(f"[ServerChan]Send message to ServerChan successfully.")
